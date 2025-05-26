@@ -1,8 +1,16 @@
 document.getElementById("contact-form").addEventListener("submit", function (e)
 {
     e.preventDefault();
-    alert("Thank you for contacting me!")
-})
+
+    emailjs.sendForm('service_123', 'template_6ui2b89', this)
+    .then(() => {
+        alert("Thank you for contacting me!");
+        this.reset();
+    }, (error) => {
+        console.error("EmailJS Error:", error)
+        alert("Failed to send: " + (error.text || JSON.stringify(error)));
+    });
+});
 
 // storing in a nodelist
 const sections = document.querySelectorAll("section");
