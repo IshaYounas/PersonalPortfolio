@@ -99,3 +99,28 @@ section.visible {
     display: block;
     margin: 0 auto;
 }
+
+.project {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  color: darkmagenta;
+}
+
+.project a {
+  display: inline-block;
+  margin-top: 10px;
+  color: blueviolet;
+  font-weight: bold;
+}
