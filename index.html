@@ -34,7 +34,57 @@
         </section>
 
         <section id="projects"><h2>Projects:</h2><div id="projects-list"></div></section>
-        <section id="blog"><h2>Blog:</h2><p>...</p></section>
+        
+        <section id="blog" aria-label="Blog section">
+            <h2>Blog:</h2>
+            <p>Welcome to my blog where I share tips, tutorials, and my personal coding journey.</p>
+
+            <article tabindex="0" aria-labelledby="post1-title" class="blog-post">
+                <h3 id="post1-title">My Journey Learning React</h3>
+                <time datetime="2025-05-20">May 20, 2025</time>
+                 <p class="preview">Starting from zero to building interactive web apps with React...</p>
+                <p class="full-content" style="display:none;">
+                    I began with basic tutorials, gradually mastering components, state, and hooks. Building projects like a portfolio and a task manager helped solidify my knowledge. React has transformed how I think about frontend development!
+                </p>
+                <button class="toggle-btn" aria-expanded="false" aria-controls="post1-full">Read More</button>
+            </article>
+
+            <article tabindex="0" aria-labelledby="post2-title" class="blog-post">
+                <h3 id="post2-title">Top 5 JavaScript Tips</h3>
+                <time datetime="2025-05-15">May 15, 2025</time>
+                <p class="preview">Learn some handy tricks to improve your JavaScript skills...</p>
+                <p class="full-content" style="display:none;">
+                    1. Use const and let instead of var<br/>
+                    2. Master arrow functions for cleaner code<br/>
+                    3. Understand closures to avoid bugs<br/>
+                    4. Use template literals for easier string building<br/>
+                    5. Always test your code with console logs or debuggers
+                </p>
+                <button class="toggle-btn" aria-expanded="false" aria-controls="post2-full">Read More</button>
+            </article>
+
+            <article tabindex="0" aria-labelledby="post3-title" class="blog-post">
+                <h3 id="post3-title">CSS Grid vs Flexbox</h3>
+                <time datetime="2025-05-10">May 10, 2025</time>
+                <p class="preview">Comparing CSS Grid and Flexbox for layout design...</p>
+                <p class="full-content" style="display:none;">
+                    Both CSS Grid and Flexbox are powerful layout tools. Grid excels at two-dimensional layouts, controlling rows and columns. Flexbox is great for one-dimensional layouts along a row or column. Knowing when to use each can greatly improve your designs.
+                </p>
+                <button class="toggle-btn" aria-expanded="false" aria-controls="post3-full">Read More</button>
+            </article>
+
+            <article tabindex="0" aria-labelledby="post4-title" class="blog-post">
+                <h3 id="post4-title">Getting Started with GitHub</h3>
+                <time datetime="2025-05-05">May 5, 2025</time>
+                <p class="preview">A beginner’s guide to version control with GitHub...</p>
+                <p class="full-content" style="display:none;">
+                    GitHub is an essential tool for developers. I learned how to create repositories, commit changes, and collaborate using branches and pull requests. It’s amazing how version control makes teamwork and project management much easier.
+                </p>
+                <button class="toggle-btn" aria-expanded="false" aria-controls="post4-full">Read More</button>
+            </article>
+        </section>
+
+
         <section id="contact">
             <h2>Contact:</h2>
             <form id="contact-form">

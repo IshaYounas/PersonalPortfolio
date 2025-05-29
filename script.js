@@ -75,3 +75,23 @@ projectsData.forEach(proj => {
 
   projectsList.appendChild(projDiv);
 });
+
+document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const article = button.closest('article');
+    const fullContent = article.querySelector('.full-content');
+    const preview = article.querySelector('.preview');
+
+    if (fullContent.style.display === 'none') {
+      fullContent.style.display = 'block';
+      preview.style.display = 'none';
+      button.textContent = 'Show Less';
+      button.setAttribute('aria-expanded', 'true');
+    } else {
+      fullContent.style.display = 'none';
+      preview.style.display = 'block';
+      button.textContent = 'Read More';
+      button.setAttribute('aria-expanded', 'false');
+    }
+  });
+});

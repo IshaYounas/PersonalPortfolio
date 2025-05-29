@@ -101,26 +101,62 @@ section.visible {
 }
 
 .project {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transform: scale(1.02);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .project h3 {
-  color: darkmagenta;
+    color: darkmagenta;
 }
 
 .project a {
-  display: inline-block;
-  margin-top: 10px;
-  color: blueviolet;
-  font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.blog-post {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover,
+.blog-post:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    outline: none;
+}
+
+.blog-post time {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: blueviolet;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.read-more:hover,
+.read-more:focus {
+    text-decoration: underline;
+    outline: none;
 }
