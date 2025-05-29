@@ -61,7 +61,7 @@ const projectsData = [
   },
 
   {
-    title: "GameNation",
+    title: "Game Nation",
     description: "A mini-game platform with 5 games, user login, local storage, and alerts.",
     link: "https://github.com/IshaYounas/GameNationProject"
   }
@@ -117,11 +117,15 @@ window.addEventListener("scroll", () => {
 
 const toggleBtn = document.getElementById('dark-mode-toggle');
 
-// Load theme from localStorage if available
+// loading theme from localStorage if available
+// dark mode version
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
     toggleBtn.textContent = 'Light Mode';
-} else {
+} 
+
+// light mode version
+else {
     toggleBtn.textContent = 'Dark Mode';
 }
 
