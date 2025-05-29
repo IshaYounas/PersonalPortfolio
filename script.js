@@ -4,11 +4,11 @@ document.getElementById("contact-form").addEventListener("submit", function (e)
 
     emailjs.sendForm('service_123', 'template_6ui2b89', this)
     .then(() => {
-        alert("Thank you for contacting me!");
-        this.reset();
+      alert("Message sent successfully!");
+      this.reset();
     }, (error) => {
-        console.error("EmailJS Error:", error)
-        alert("Failed to send: " + (error.text || JSON.stringify(error)));
+      console.error('Failed to send message:', error);
+      alert("Failed to send message. Try again later.");
     });
 });
 
@@ -58,7 +58,13 @@ const projectsData = [
     title: "Fleet Manager",
     description: "A console-based fleet management system written in C. Utilizes singly linked lists to manage machinery records, including add, update, delete, display, sorting by valuation, statistics generation, login authentication, and file I/O operations. Designed for efficient data handling and real-world application logic.",
     url: "https://github.com/IshaYounas/FleetManagerC"
-    },
+  },
+
+  {
+    title: "GameNation",
+    description: "A mini-game platform with 5 games, user login, local storage, and alerts.",
+    link: "https://github.com/IshaYounas/GameNation"
+  }
 ];
 
 const projectsList = document.getElementById("projects-list");
@@ -82,16 +88,49 @@ document.querySelectorAll('.toggle-btn').forEach(button => {
     const fullContent = article.querySelector('.full-content');
     const preview = article.querySelector('.preview');
 
-    if (fullContent.style.display === 'none') {
-      fullContent.style.display = 'block';
+    // read more button is pressed
+    if (fullContent.style.display === 'none') { 
+      fullContent.style.display = 'block'; // full content is displaying
       preview.style.display = 'none';
       button.textContent = 'Show Less';
       button.setAttribute('aria-expanded', 'true');
-    } else {
+    } // if
+
+    // read more button is NOT pressed
+    else {
       fullContent.style.display = 'none';
-      preview.style.display = 'block';
+      preview.style.display = 'block'; // preview is displaying
       button.textContent = 'Read More';
       button.setAttribute('aria-expanded', 'false');
     }
   });
 });
+
+window.addEventListener("scroll", () => {
+  document.querySelectorAll("section").forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add("visible");
+    }
+  });
+});
+
+const toggleBtn = document.getElementById('dark-mode-toggle');
+
+// Load theme from localStorage if available
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleBtn.textContent = 'Light Mode';
+} else {
+    toggleBtn.textContent = 'Dark Mode';
+}
+
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    const isDark = document.body.classList.contains('dark-mode');
+    toggleBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+

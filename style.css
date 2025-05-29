@@ -1,31 +1,26 @@
 body {
-    font-family: Arial, sans-serif;
+   font-family: 'Segoe UI', sans-serif;
     margin: 5px;
     padding: 5px;
     line-height: 1.6;
-    background: #f5f5f5; /* light grey/white */
+    background-color: #fbeee0; /* light peach */
+    color: #2e2e2e; /* dark slate */
     scroll-behavior: smooth;
-}
-
-header {
-    background: #333; /* grey */
-    color: white;
-    padding: 20px;
-    text-align: center;
 }
 
 nav a {
     padding: 10px;
-    background: white;
+    background: #f6d6ff; /* light pink */
+    color: #2e2e2e; /* charcoal */
     margin: 10px;
     border-radius: 8px;
     text-decoration: none;
-    color: purple;
+    color: #333; /* grey */
 }
 
 nav a:hover {
-    background: #ddd; /* white */
-    color: #333; /* grey*/
+    background-color: #e3c5fc; /* slightly darker lavender */
+    color: white;
     transition: 0.3s;
 }
 
@@ -37,7 +32,7 @@ form input, form textarea {
 }
 
 button {
-    background: #333; /* grey */
+    background-color: #b56576; /* warm plum */
     color: white;
     padding: 10px 15px;
     border: none;
@@ -50,8 +45,8 @@ section {
 }
 
 header, footer {
-    background: lightgreen; /* black */
-    color: #333; /* grey */
+    background: #d8bfd8; /* lavender */
+    color: #2e2e2e; /* grey */
     text-align: center;
     padding: 20px 0;
 }
@@ -101,7 +96,7 @@ section.visible {
 }
 
 .project {
-    background-color: white;
+    background-color: #fff8f0; /* white */
     border: 1px solid #ccc;
     border-radius: 12px;
     padding: 20px;
@@ -126,25 +121,25 @@ section.visible {
 }
 
 .blog-post {
-    background: white;
+    background: #fff8f0; /* white */
     padding: 20px;
     margin-bottom: 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* black */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-post:hover,
 .blog-post:focus {
     transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2); /* black */
     outline: none;
 }
 
 .blog-post time {
     display: block;
     font-size: 0.9em;
-    color: #555;
+    color: #555; /* grey */
     font-style: italic;
     margin-bottom: 10px;
 }
@@ -159,4 +154,71 @@ section.visible {
 .read-more:focus {
     text-decoration: underline;
     outline: none;
+}
+
+body.dark-mode {
+    background-color: #121212; /* black */
+    color: #f5f5f5; /* white */
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background: #1e1e1e; /* black */
+    color: white;
+}
+
+body.dark-mode nav a {
+    background: #333; /* grey */
+    color: white; 
+}
+
+body.dark-mode nav a:hover {
+    background: #555; /* light grey */
+    color: #ddd; /* white */
+}
+
+body.dark-mode .project,
+body.dark-mode .blog-post {
+    background-color: #1e1e1e; /* black */
+    color: #f5f5f5; /* white */
+}
+
+/* DARK MODE */
+body.dark-mode {
+    background-color: #1f1d36; /* deep indigo/navy */
+    color: #e0e0e0; /* soft white */
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background-color: #2b2d42; /* midnight blue */
+    color: #f0f0f0; /* white */
+}
+
+body.dark-mode nav a {
+    background-color: #3f3351; /* dark purple */
+    color: #f5f5f5; /* white */
+}
+
+body.dark-mode nav a:hover {
+    background-color: #5c5470; /* light purple */
+    color: #fff; /* white */
+}
+
+body.dark-mode .project,
+body.dark-mode .blog-post {
+    background-color: #2e2e38; /* black */
+    border: 1px solid #444; /* grey */
+    color: #e8e8e8; /* white */
+}
+
+body.dark-mode button,
+body.dark-mode .resume-link {
+    background-color: #9d4edd; /* vibrant purple */
+    color: white;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .resume-link:hover {
+    background-color: #7b2cbf; /* purple */
 }
