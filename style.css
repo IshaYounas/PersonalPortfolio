@@ -222,3 +222,18 @@ body.dark-mode button:hover,
 body.dark-mode .resume-link:hover {
     background-color: #7b2cbf; /* purple */
 }
+
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #556cd6; /* purple blue */
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: #3b4eb1; /* dark blue */
+}

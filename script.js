@@ -63,7 +63,7 @@ const projectsData = [
   {
     title: "GameNation",
     description: "A mini-game platform with 5 games, user login, local storage, and alerts.",
-    link: "https://github.com/IshaYounas/GameNation"
+    link: "https://github.com/IshaYounas/GameNationProject"
   }
 ];
 
