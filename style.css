@@ -76,3 +76,26 @@ section.visible {
     opacity: 1;
     transform: translateY(0);
 }
+
+#about {
+    padding: 10px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; 
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-image img {
+    max-width: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
